@@ -1,6 +1,6 @@
 import json
-import re
 import logging
+import re
 
 logger = logging.getLogger(__name__)
 
@@ -11,7 +11,7 @@ def investment_bank(month, transactions, limit):
     for t in transactions:
         if t["Дата операции"].startswith(month):
             amount = t["Сумма операции"]
-            rounded = ((amount // limit) + 1) * limit
+            rounded = ((amount + limit - 1) // limit) * limit
             total += rounded - amount
 
     return total

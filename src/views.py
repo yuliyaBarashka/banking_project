@@ -2,8 +2,8 @@ import json
 import logging
 from datetime import datetime
 
-from src.utils import load_transactions, prepare_dataframe, get_date_range
 from src.api import get_currency_rates, get_stock_prices
+from src.utils import get_date_range, load_transactions, prepare_dataframe
 
 logger = logging.getLogger(__name__)
 
