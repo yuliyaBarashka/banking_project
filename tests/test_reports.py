@@ -45,6 +45,6 @@ def test_save_report(tmp_path):
     def dummy():
         return pd.DataFrame({"a": [1, 2]})
 
-    result = dummy()
+    dummy()
 
     assert file.exists()
